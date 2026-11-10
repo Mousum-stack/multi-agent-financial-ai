@@ -1,124 +1,120 @@
-# Multi-Agent Financial Research & Risk Intelligence Platform
+# Multi-Agent Financial AI
 
-## Project Overview
+An open-source project exploring multi-agent financial research and risk intelligence using Python and LangGraph.
 
-This project aims to build a real-world AI/ML system for financial research and quantitative risk analysis.
+The goal is to build a modular AI system in which specialized agents collaborate to collect financial information, analyze company fundamentals, and support structured risk assessment.
 
-The system will combine machine learning, large language models, tool calling, multi-agent systems, Model Context Protocol (MCP), and MLOps.
+> **Project status:** Active development. This project is being developed incrementally, with an emphasis on understanding, testing, and documenting each component.
 
-The project is being developed as a learn-by-building journey, where each technology is learned and implemented as the system evolves.
+## Overview
 
-## Problem Statement
+Financial research involves gathering information from different sources, interpreting financial metrics, and combining the findings into a meaningful analysis.
 
-Financial research often requires information and analysis from multiple sources.
+This project explores how a multi-agent architecture can organize these tasks into specialized components coordinated through LangGraph.
 
-A researcher may need to:
+The project is focused on financial research and analytical workflows, not automated stock-price prediction or investment recommendations.
 
-- Collect financial and market data
-- Query structured databases
-- Analyze historical data
-- Run machine learning models
-- Calculate quantitative risk metrics
-- Gather relevant research information
-- Combine the results into a useful analysis
+## Current Implementation
 
-These tasks can involve multiple tools and repeated manual work.
+The initial implementation focuses on learning and building a LangGraph-based agent workflow.
 
-This project explores how an AI-powered system with specialized agents and tools can automate parts of this workflow while keeping quantitative analysis and machine learning components separate and traceable.
+The development work includes:
 
+- Python-based project architecture.
+- LangGraph orchestration.
+- Specialized agent design.
+- Research and analysis workflow.
+- Experimentation with financial research tasks.
 
+Only components that are implemented and verified should be considered complete. Additional capabilities are being developed incrementally.
 
-## Proposed Solution
+## Planned Architecture
 
-The system will use an AI orchestrator to coordinate specialized agents.
+The long-term architecture is intended to include:
 
-The initial architecture will include:
+| Component | Responsibility |
+|---|---|
+| Research Agent | Gather relevant company and financial information |
+| Data Agent | Validate and organize financial data |
+| Analysis Agent | Interpret financial metrics and fundamentals |
+| Risk Agent | Evaluate financial risk indicators |
+| ML Components | Support selected quantitative analytical tasks |
+| MCP Tool Layer | Standardize access to external tools |
+| LangGraph | Coordinate agent execution and workflow state |
 
-- Research Agent
-- Data Agent
-- Machine Learning Agent
-- Risk Analysis Agent
-- Tool layer
-- MCP integration
-- ML/API services
-- MLOps components
+These are architectural goals, not a claim that every component is currently implemented.
 
-The system will gradually evolve from a simple data and machine-learning pipeline into a multi-agent AI application.
+## Technology Stack
 
+- **Language:** Python
+- **Agent orchestration:** LangGraph
+- **AI:** Large Language Models
+- **Data processing:** Pandas, NumPy
+- **Machine learning:** Scikit-learn (planned for selected analytical tasks)
+- **Tool integration:** MCP (planned integration)
+- **Testing:** pytest (where configured)
 
-## Project Scope
+## Repository Structure
 
-This project is not intended to be a stock-price prediction system.
+```text
+multi-agent-financial-ai/
+│
+├── docs/          # Project documentation
+├── notebooks/     # Experiments and analysis
+├── scripts/       # Utility and execution scripts
+├── src/           # Application source code
+├── tests/         # Automated tests
+│
+├── .gitignore
+├── LICENSE
+└── README.md
+```
 
-Machine learning models may be used for specific analytical tasks, but the primary objective is to engineer a system that can coordinate data retrieval, quantitative analysis, machine learning models, external tools, and specialized AI agents.
+## Development Approach
 
-The project focuses on AI/ML engineering, system architecture, automation, reliability, and learning how these components work together.
+The project follows an incremental engineering workflow:
 
-
-
-## Technology Roadmap
-
-### Programming & Engineering
-- Python
-- SQL
-- Linux
-- Bash
-- Git & GitHub
-
-### Data & Machine Learning
-- Pandas
-- NumPy
-- Scikit-learn
-- TensorFlow / PyTorch
-- Model evaluation
-- Feature engineering
-
-### AI & Agentic Systems
-- Large Language Models
-- Prompting
-- Structured outputs
-- Tool calling
-- Agent orchestration
-- Multi-agent systems
-- Model Context Protocol (MCP)
-
-### MLOps & Deployment
-- FastAPI
-- MLflow
-- Docker
-- Testing
-- Logging
-- Model deployment
-- Monitoring
-- CI/CD
-
-
-
-## Learning Approach
-
-This project follows a learn-by-building approach.
-
-Instead of learning every technology separately and attempting to combine them at the end, each technology will be introduced when it becomes necessary for the project.
-
-The learning cycle is:
-
-Learn → Build → Test → Debug → Understand → Document → Commit
-
-
+1. Understand the problem.
+2. Design the architecture.
+3. Implement individual components.
+4. Integrate components using LangGraph.
+5. Test functionality and failure cases.
+6. Document implementation decisions.
+7. Improve reliability and maintainability.
 
 ## Development Roadmap
 
-- [ ] Phase 1 — Project foundation
-- [ ] Phase 2 — Financial data pipeline
-- [ ] Phase 3 — SQL database and data analysis
-- [ ] Phase 4 — Machine learning pipeline
-- [ ] Phase 5 — Model API
-- [ ] Phase 6 — LLM integration
-- [ ] Phase 7 — Tool calling
-- [ ] Phase 8 — Multi-agent system
-- [ ] Phase 9 — MCP integration
-- [ ] Phase 10 — MLOps and experiment tracking
-- [ ] Phase 11 — Docker and deployment
-- [ ] Phase 12 — Testing and monitoring
-- [ ] Phase 13 — Final integration
-- [ ] Phase 14 — Documentation and portfolio
+- [x] Public project repository and initial structure
+- [x] MIT open-source licence
+- [x] Initial LangGraph learning and experimentation
+- [ ] Financial data collection and validation
+- [ ] Structured multi-agent state management
+- [ ] Research and analysis workflow tests
+- [ ] Risk analysis agent
+- [ ] External tool integration
+- [ ] MCP integration
+- [ ] Quantitative analysis and ML components
+- [ ] CI/CD and automated quality checks
+- [ ] Documentation and stable release
+
+## Contributing
+
+Contributions, bug reports, and suggestions are welcome.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request.
+
+## Security
+
+Please refer to [SECURITY.md](SECURITY.md) for reporting security vulnerabilities.
+
+## Licence
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Maintainer
+
+Maintained by [Mousum Raj Gogoi](https://github.com/Mousum-stack).
+
+---
+
+This is an evolving open-source project. Features, architecture, and documentation will be updated as development progresses.
