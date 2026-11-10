@@ -4,71 +4,128 @@ An open-source project exploring multi-agent financial research and risk intelli
 
 The goal is to build a modular AI system in which specialized agents collaborate to collect financial information, analyze company fundamentals, and support structured risk assessment.
 
-> **Project status:** Active development. This project is being developed incrementally, with an emphasis on understanding, testing, and documenting each component.
+> **Project status:** Active development. The project is being developed incrementally, with an emphasis on understanding, testing, documenting, and validating each component.
 
 ## Overview
 
-Financial research involves gathering information from different sources, interpreting financial metrics, and combining the findings into a meaningful analysis.
+Financial research involves gathering information from different sources, interpreting financial metrics, and combining findings into meaningful analysis.
 
 This project explores how a multi-agent architecture can organize these tasks into specialized components coordinated through LangGraph.
 
-The project is focused on financial research and analytical workflows, not automated stock-price prediction or investment recommendations.
+The project focuses on financial research and analytical workflows, not automated stock-price prediction or investment recommendations.
 
 ## Current Implementation
 
-The initial implementation focuses on learning and building a LangGraph-based agent workflow.
+The initial implementation focuses on learning and developing a LangGraph-based workflow.
 
-The development work includes:
+Current development includes:
 
 - Python-based project architecture.
-- LangGraph orchestration.
-- Specialized agent design.
-- Research and analysis workflow.
-- Experimentation with financial research tasks.
+- Initial LangGraph workflow with research and analysis nodes.
+- State management and node orchestration experimentation.
+- Development of a modular agent architecture.
+- Documentation of implementation decisions and learning progress.
 
-Only components that are implemented and verified should be considered complete. Additional capabilities are being developed incrementally.
+The current workflow uses demonstration logic. It does not yet perform autonomous financial research or retrieve live financial data.
+
+Only components that have been implemented and verified should be considered complete.
 
 ## Planned Architecture
 
-The long-term architecture is intended to include:
+The long-term architecture is intended to include the following components:
 
 | Component | Responsibility |
 |---|---|
 | Research Agent | Gather relevant company and financial information |
 | Data Agent | Validate and organize financial data |
-| Analysis Agent | Interpret financial metrics and fundamentals |
+| Analysis Agent | Interpret financial metrics and company fundamentals |
 | Risk Agent | Evaluate financial risk indicators |
 | ML Components | Support selected quantitative analytical tasks |
 | MCP Tool Layer | Standardize access to external tools |
 | LangGraph | Coordinate agent execution and workflow state |
 
-These are architectural goals, not a claim that every component is currently implemented.
+These are architectural goals, not claims that every component is currently implemented.
 
 ## Technology Stack
 
-- **Language:** Python
-- **Agent orchestration:** LangGraph
-- **AI:** Large Language Models
-- **Data processing:** Pandas, NumPy
-- **Machine learning:** Scikit-learn (planned for selected analytical tasks)
-- **Tool integration:** MCP (planned integration)
-- **Testing:** pytest (where configured)
+| Technology | Purpose / Status |
+|---|---|
+| Python | Core programming language |
+| LangGraph | Initial workflow orchestration |
+| Large Language Models | Planned AI integration |
+| Pandas and NumPy | Planned financial data processing |
+| Scikit-learn | Planned quantitative analysis |
+| MCP | Planned external tool integration |
+| pytest | Planned automated testing |
+
+Technology integration will be documented as individual components are implemented and verified.
 
 ## Repository Structure
 
 ```text
 multi-agent-financial-ai/
 │
-├── docs/          # Project documentation
-├── notebooks/     # Experiments and analysis
-├── scripts/       # Utility and execution scripts
-├── src/           # Application source code
-├── tests/         # Automated tests
+├── docs/
+│   ├── architecture/
+│   ├── learning-journal/
+│   ├── monthly-reports/
+│   └── weekly-reports/
+│
+├── notebooks/
+├── scripts/
+│
+├── src/
+│   ├── agents/
+│   ├── data/
+│   ├── mcp/
+│   ├── ml/
+│   └── tools/
+│
+├── tests/
 │
 ├── .gitignore
+├── requirements.txt
 ├── LICENSE
 └── README.md
 ```
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Mousum-stack/multi-agent-financial-ai.git
+
+cd multi-agent-financial-ai
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+### 3. Activate the environment
+
+**macOS / Linux:**
+
+```bash
+source .venv/bin/activate
+```
+
+### 4. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run the initial LangGraph workflow
+
+```bash
+python src/agents/basic_graph.py
+```
+
+The example demonstrates basic graph execution using research and analysis nodes. It currently uses demonstration logic rather than live financial data.
 
 ## Development Approach
 
