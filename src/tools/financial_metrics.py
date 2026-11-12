@@ -49,3 +49,19 @@ def calculate_financial_metrics(financial_data: dict) -> dict:
     }
 
     return metrics
+
+if __name__ == "__main__":
+    financial_data = {
+        "revenue": 1000000,
+        "net_income": 150000,
+        "total_assets": 800000,
+        "total_liabilities": 400000,
+        "current_assets": 300000,
+        "current_liabilities": 150000
+    }
+
+    results = calculate_financial_metrics(financial_data)
+
+    print("Financial Metrics:")
+    for metric, value in results.items():
+        print(f"{metric}: {value:.2f}")
