@@ -44,3 +44,16 @@ def test_zero_total_assets():
 
     with pytest.raises(ValueError, match="Total assets cannot be zero"):
         calculate_financial_metrics(financial_data)
+        
+def test_zero_current_liabilities():
+    financial_data = {
+        "revenue": 1000000,
+        "net_income": 150000,
+        "total_assets": 800000,
+        "total_liabilities": 400000,
+        "current_assets": 300000,
+        "current_liabilities": 0
+    }
+
+    with pytest.raises(ValueError, match="Current liabilities cannot be zero"):
+        calculate_financial_metrics(financial_data)
