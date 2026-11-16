@@ -57,3 +57,29 @@ def test_zero_current_liabilities():
 
     with pytest.raises(ValueError, match="Current liabilities cannot be zero"):
         calculate_financial_metrics(financial_data)
+        
+
+def test_missing_required_field():
+    financial_data = {
+        "net_income": 150000,
+        "total_assets": 800000,
+        "total_liabilities": 400000,
+        "current_assets": 300000,
+        "current_liabilities": 150000
+    }
+
+    with pytest.raises(ValueError, match="Missing required field: revenue"):
+        calculate_financial_metrics(financial_data)
+        
+def test_invalid_data_type():
+    financial_data = {
+        "revenue": "one million",
+        "net_income": 150000,
+        "total_assets": 800000,
+        "total_liabilities": 400000,
+        "current_assets": 300000,
+        "current_liabilities": 150000
+    }
+
+    with pytest.raises(ValueError, match="revenue must be a numeric value"):
+        calculate_financial_metrics(financial_data)
