@@ -83,3 +83,16 @@ def test_invalid_data_type():
 
     with pytest.raises(ValueError, match="revenue must be a numeric value"):
         calculate_financial_metrics(financial_data)
+        
+def test_boolean_value_rejected():
+    financial_data = {
+        "revenue": True,
+        "net_income": 150000,
+        "total_assets": 800000,
+        "total_liabilities": 400000,
+        "current_assets": 300000,
+        "current_liabilities": 150000
+    }
+
+    with pytest.raises(ValueError, match="revenue must be a numeric value"):
+        calculate_financial_metrics(financial_data)
