@@ -41,6 +41,18 @@ def calculate_financial_metrics(financial_data: dict) -> dict:
     if current_liabilities == 0:
         raise ValueError("Current liabilities cannot be zero")
 
+  # Validate non-negative fields
+    non_negative_fields = [
+        "revenue",
+        "total_assets",
+        "total_liabilities",
+        "current_assets",
+        "current_liabilities"
+    ]
+
+    for field in non_negative_fields:
+        if financial_data[field] < 0:
+            raise ValueError(f"{field} cannot be negative")   
     # Calculate financial metrics
     metrics = {
         "net_profit_margin": (net_income / revenue) * 100,
@@ -65,3 +77,5 @@ if __name__ == "__main__":
     print("Financial Metrics:")
     for metric, value in results.items():
         print(f"{metric}: {value:.2f}")
+        
+      
